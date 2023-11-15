@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:  
+{
+[bootloader]E:/FPGA/workspase_aeag/aeag100_5/aeag100_plt/zynq_fsbl/fsbl.elf
+E:/FPGA/workspase_aeag/aeag100_5/hw_spec/aeag_top.bit
+E:/FPGA/workspase_aeag/aeag100_5/aeag100_app/Debug/aeag100_app.elf
+}

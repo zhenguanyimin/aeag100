@@ -1,0 +1,11 @@
+
+
+
+20221027：
+aeag_top_20221027.bit
+aeag_top_20221027.ltx
+aeag_top_20221027.xsa
+	更新说明：
+	1.i2c（电池电量检测）+uart(LOG)接口复用，修改.bd文件，更新.XSA文件；并且在PL端增加NTC管脚输入管脚作为UART的接收RX使用；
+	2.启用ad_start功能，此功能已配合两个算法模块进行验证，DMA0和DMA1中断OK，停止、启动发数据功能有效；	
+	3.GPIO更新；

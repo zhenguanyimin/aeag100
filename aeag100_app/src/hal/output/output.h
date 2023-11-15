@@ -1,0 +1,62 @@
+/*
+ * output.h
+ *
+ *  Created on:
+ *      Author: Ultimate
+ */
+#ifndef OUTPUT_H_
+#define OUTPUT_H_
+#include <sys/_stdint.h>
+
+#include "../hal.h"
+typedef enum
+{
+
+	IO_LED_ALL = 0x37,		   // LCD1_LVDS_R1+
+	IO_LED_2G = 0x36,		   // LCD1_LVDS_R2-
+	IO_LED_2_4G = 0x39,	   // LCD1_LVDS_R2+
+	IO_LED_4_6G = 0x38,	   // LCD1_LVDS_CLK-
+	IO_LED_GNSS = 0x3B,	   // LCD1_LVDS_CLK+
+	IO_LED_BAT_GREEN = 0x34,  // LCD1_LVDS_R0-
+	IO_LED_BAT_YELLOW = 0x35, //LCD1_LVDS_R0+
+	IO_LED_BAT_RED = 0x3D,	   //LCD1_LVDS_R1-
+	IO_LED_WARNING = 0x3A,	   // LCD1_LVDS_R3-
+	IO_LED_POWER = 0x3C,	   // LCD1_LVDS_R3-
+
+	IO_FPGA_C_SW_2_4G = 0x61, // 2-4G
+	IO_FPGA_S_SW_4_6G = 0x60, // 4-6G
+	IO_FPGA_SUB_SW_2G = 0x62, //<2G
+	IO_BOOST_ON_OFF_28V = 0x66,
+	IO_B10_DAC_CH1_WRT,
+	IO_B10_DAC_CH2_WRT,
+	IO_B10_DAC_CH1_CLK,
+	IO_B10_DAC_CH2_CLK,
+	IO_DAC_PD = 0x50,
+	IO_BUZZ = 0x67,
+	IO_VBRATOR = 0x68,
+	IO_GLIMING = 0x69,
+	IO_4G_PWRON,
+	IO_4G_WAKEUP,
+	IO_RST_4G,
+	IO_WIFI_EN,
+	IO_WIFI_RST,
+	IO_WIFI_CLKS,
+	IO_AD9361_CTRL_OUT0,
+	IO_AD9361_CTRL_OUT1,
+	IO_AD9361_CTRL_OUT2,
+	IO_AD9361_CTRL_OUT3,
+	IO_AD9361_CTRL_OUT4,
+	IO_AD9361_CTRL_OUT5,
+	IO_AD9361_CTRL_OUT6,
+	IO_AD9361_CTRL_OUT7,
+	IO_AD9361_EN_AGC,
+	IO_AD9361_ENABLE,
+	IO_AD9361_RESETB,
+	IO_AD9361_TXNRX,
+
+	OUTPUT_NAME_MAX
+} OUTPUT_NAME; //名字
+
+void GPIO_OutputCtrl(OUTPUT_NAME name, uint8_t value);
+void write_register(uint32_t regAddr, uint32_t value);
+#endif /* OUTPUT_H_ */
